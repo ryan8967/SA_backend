@@ -1,0 +1,37 @@
+USER API:
+
+POST http://localhost:8080/api/users/login
+body 輸入userName, password 後回傳user id
+
+CORRECT API (已答對過的題庫):
+
+判斷單字是否已被答對過
+POST http://localhost:8080/api/correct/check
+在query 寫 http://localhost:8080/api/correct/check?word=*** 
+回傳true代表已存在，要跳過
+回傳false 則繼續動作
+
+將新答對的單字加入已答對題庫(不會在測驗出現)
+POST http://localhost:8080/api/correct/add
+body範本如下(json)
+{
+    "word" : "yeewt"
+}
+
+INCORRECT API(寫錯的題目)
+
+將錯誤題目抓出來，至多１０個(抓哪幾個的算法之後說)
+GET　http://localhost:8080/api/incorrect/get
+回傳樣式如下
+[
+    {
+        "id": "675c2e6649cf3d891e36481a",
+        "word": "Zebra",
+        "correctCnt": 0
+    },
+    {
+        "id": "675c46bdfb527522190ab489",
+        "word": "cobra",
+        "correctCnt": 0
+    }
+]
