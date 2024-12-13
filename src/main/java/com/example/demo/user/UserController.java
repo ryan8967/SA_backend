@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+
+// user 登入， response 會回傳 user id
 @RestController
 @RequestMapping("/api/users")
 public class UserController {
