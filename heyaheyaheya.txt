@@ -35,3 +35,15 @@ GET　http://localhost:8080/api/incorrect/get
         "correctCnt": 0
     }
 ]
+
+將答錯的單字加入答錯題庫
+POST http://localhost:8080/api/incorrect/add
+body範本如下(json)
+{
+    "word" : "yeewt"
+}
+
+
+錯的題庫中再次測驗後答對的題目，將答對次數加一，達3次則刪除並加到correct題庫
+POST http://localhost:8080/api/incorrect/reviewed
+在query 寫 http://localhost:8080/api/incorrect/reviewed?word=*****
