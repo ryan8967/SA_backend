@@ -12,10 +12,11 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.CrossOrigin;
 
 import com.example.demo.correct.Correct;
 import com.example.demo.correct.CorrectRepository;
-
+@CrossOrigin(origins = "http://localhost:8081") // Allow specific origin
 @RestController
 @RequestMapping("/api/incorrect")
 public class IncorrectController {
