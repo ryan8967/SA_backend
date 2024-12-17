@@ -11,6 +11,7 @@ public class Pet {
     private String petNum;
     private String exp;
     private String level;
+    private String petname;
 
     // Getters and setters
     public String getId() {
@@ -37,6 +38,13 @@ public class Pet {
         this.petNum = petNum;
     }
 
+    public String getPetname() {
+        return petname;
+    }
+
+    public void setPetname(String petname) {
+        this.petname = petname;
+    }
     public String getExp() {
         return exp;
     }
