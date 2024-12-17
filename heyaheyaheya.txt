@@ -47,3 +47,21 @@ body範本如下(json)
 錯的題庫中再次測驗後答對的題目，將答對次數加一，達3次則刪除並加到correct題庫
 POST http://localhost:8080/api/incorrect/reviewed
 在query 寫 http://localhost:8080/api/incorrect/reviewed?word=*****
+
+
+PET
+GET http://localhost:8080/api/pet/get
+拿現有唯一的pet資訊，回傳如下
+[
+    {
+        "id": "675a83df84ea241419fa2083",
+        "userId": "65e499b3b281ffc343ab439a",
+        "petNum": "1",
+        "exp": "60",
+        "level": "3"
+    }
+]
+
+POST http://localhost:8080/api/pet/addExp?exp=150
+讓寵物升等，exp= 多少由答對題數*10
+exp超過100自行升等
